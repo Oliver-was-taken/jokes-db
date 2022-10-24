@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/localdb
+    username: localuser
+    password: localpass
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate.ddl-auto: create
+    database-platform: org.hibernate.dialect.PostgreSQL95Dialect
+    open-in-view: false
