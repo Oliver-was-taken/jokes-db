@@ -18,4 +18,4 @@
         * Tests für alle Services
 
 ## Selbsteinschätzung
-Ich denke, dass mein Programm im Endefekt ganz gut rausgekommen ist. Ich habe die meisten der Requirements erfüllt und auch ein paar extras wie das Frontend und so hinzugefügt. Daher würde ich mich selbst auch eher gut einschätzen mit einer 5.5. Der Code ist teilweise etwas "messy" aber geht ganz in Ordnung. Es hat sogar teilweise Kommentare für die Übersicht. Der Fokus lag bei funktionalitäten und nicht bei Clean-Code. :)
+Ich denke, dass mein Programm im Endefekt ganz gut rausgekommen ist. Ich habe die meisten der **Requirements erfüllt** und auch ein paar **extras wie das Frontend** und so hinzugefügt. Daher würde ich mich selbst auch eher gut einschätzen mit einer **5.5**. Der Code ist teilweise etwas "messy" aber geht ganz in Ordnung. Es hat sogar teilweise **Kommentare** für die Übersicht. Der Fokus lag bei **funktionalitäten** und nicht bei Clean-Code. :)
