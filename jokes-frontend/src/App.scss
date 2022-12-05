@@ -1,0 +1,33 @@
+.App {
+  text-align: center;
+  background-color: #282c34;
+  height: 100vh;
+  width: 100vw;
+  color: #fff;
+  padding-top: 8rem;
+}
+
+.joke-container {
+  margin: 0 25rem;
+  border-radius: 25px;
+  padding: 2rem;
+  background-color: lighten(#282c34, 2%);
+}
+
+.rating {
+  margin-top: 0.5rem;
+}
+
+.joke {
+  font-size: 1.25rem;
+}
+
+.pun {
+  color: darken(#fff, 40%);
+  font-weight: lighter;
+}
+
+.fetch-button {
+  margin-top: 1rem;
+  margin-left: 0.5rem;
+}

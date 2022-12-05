@@ -1,32 +1,44 @@
 package ch.bbw.m151.jokesdb.datamodel;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import ch.bbw.m151.jokesdb.datamodel.enums.Categories;
+import ch.bbw.m151.jokesdb.datamodel.enums.Flags;
+import ch.bbw.m151.jokesdb.datamodel.enums.JokeTypes;
+import lombok.Getter;
+import lombok.Setter;
+
+import javax.persistence.*;
+import java.time.LocalDateTime;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Entity
 @Table(name = "jokes")
+@Getter
+@Setter
 public class JokesEntity {
+    @Id
+    @GeneratedValue
+    private int id;
+    @Column(length = 500)
+    private String joke;
+    private String setup;
+    private String delivery;
+    private String categories;
+    private String languages;
+    private String flags;
+    private String jokeType;
+    private String searchString;
+    private LocalDateTime creationTimeStamp;
 
-	@Id
-	@GeneratedValue
-	int id;
+    public void setCategories(List<Categories> categories) {
+        this.categories = categories.stream().map(Categories::getCategory).collect(Collectors.joining(","));
+    }
 
-	@Column(nullable = false)
-	String joke;
+    public void setFlags(List<Flags> flags) {
+        this.flags = flags.stream().map(Flags::getFlag).collect(Collectors.joining(","));
+    }
 
-	public JokesEntity setJoke(String joke) {
-		this.joke = joke;
-		return this;
-	}
-
-	public int getId() {
-		return id;
-	}
-
-	public String getJoke() {
-		return joke;
-	}
+    public void setJokeType(List<JokeTypes> jokeTypes) {
+        this.jokeType = jokeTypes.stream().map(JokeTypes::getJokeType).collect(Collectors.joining(","));
+    }
 }

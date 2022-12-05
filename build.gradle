@@ -18,6 +18,8 @@ repositories {
 }
 
 dependencies {
+	implementation 'org.projectlombok:lombok:1.18.24'
+	annotationProcessor 'org.projectlombok:lombok:1.18.24'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-webflux'
@@ -37,7 +39,7 @@ tasks.create('dockerPostgres', Exec) {
 }
 
 bootRun {
-	dependsOn dockerPostgres
+	//dependsOn dockerPostgres
 }
 
 tasks.named('test') {
