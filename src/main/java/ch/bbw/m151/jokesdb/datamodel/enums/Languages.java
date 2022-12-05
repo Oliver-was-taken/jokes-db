@@ -12,6 +12,12 @@ public enum Languages {
     FRENCH("fr"),
     PORTUGUESE("pt");
 
+    private final String language;
+
+    Languages(String language) {
+        this.language = language;
+    }
+
     @JsonGetter
     public static Languages fromString(String language) {
         return switch (language) {
@@ -23,12 +29,6 @@ public enum Languages {
             case "pt" -> Languages.PORTUGUESE;
             default -> throw new IllegalArgumentException("Language does not exist");
         };
-    }
-
-    private final String language;
-
-    Languages(String language) {
-        this.language = language;
     }
 
     public String getLanguage() {

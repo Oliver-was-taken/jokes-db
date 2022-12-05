@@ -18,10 +18,9 @@ import org.springframework.test.web.reactive.server.WebTestClient;
 class RatingsControllerTest implements WithAssertions {
 
     @Autowired
-    private WebTestClient webTestClient;
-
-    @Autowired
     RatingRepository repository;
+    @Autowired
+    private WebTestClient webTestClient;
 
     @Test
     void rateAJoke() {

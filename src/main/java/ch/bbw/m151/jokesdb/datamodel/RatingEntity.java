@@ -13,7 +13,8 @@ import javax.persistence.*;
 public class RatingEntity {
     @Id
     private int id;
-    @OneToOne @MapsId
+    @OneToOne
+    @MapsId
     private JokesEntity joke;
     private int starRating;
     private String description;

@@ -21,13 +21,14 @@ public class RatingsController {
 
     /**
      * Add a rating to a joke
-     * @param jokeId - OneToOne foreign key to joke
-     * @param starRating - Rating of joke
+     *
+     * @param jokeId      - OneToOne foreign key to joke
+     * @param starRating  - Rating of joke
      * @param description - description of rating
      */
     @CrossOrigin
     @PostMapping("/rateJoke")
-    public void rateAJoke(@RequestParam("jokeId") int jokeId, @RequestParam("starRating") int starRating, @RequestParam("description") String description){
+    public void rateAJoke(@RequestParam("jokeId") int jokeId, @RequestParam("starRating") int starRating, @RequestParam("description") String description) {
         ratingService.addRating(jokeId, starRating, description);
     }
 }

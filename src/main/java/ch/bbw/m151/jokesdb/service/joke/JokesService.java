@@ -45,7 +45,7 @@ public class JokesService {
         }
     }
 
-    public Optional<JokesEntity> getRandomJoke(){
+    public Optional<JokesEntity> getRandomJoke() {
         List<JokesEntity> allJokes = jokesRepository.findAll();
         int maxId = allJokes.size();
         int randomId = (int) Math.floor(Math.random() * maxId + 1);

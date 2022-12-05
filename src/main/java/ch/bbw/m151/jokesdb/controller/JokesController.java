@@ -24,15 +24,16 @@ import java.util.Optional;
 @RestController
 @RequiredArgsConstructor
 public class JokesController {
-    Logger logger = LoggerFactory.getLogger(JokesController.class);
     private final JokesRepository jokesRepository;
     @Autowired
     private final RemoteJokesService remoteJokesService;
+    Logger logger = LoggerFactory.getLogger(JokesController.class);
     @Autowired
     private JokesService jokesService;
 
     /**
      * Get all jokes from database
+     *
      * @param pageable
      * @return randomJokes
      */
@@ -44,6 +45,7 @@ public class JokesController {
 
     /**
      * Get a random joke from database
+     *
      * @return randomJoke
      */
     @CrossOrigin
@@ -55,12 +57,13 @@ public class JokesController {
 
     /**
      * Load new jokes int database
-     * @param categories - categories of joke
-     * @param language - joke language
-     * @param flags - flags for joke (blacklist)
-     * @param jokeTypes - type of joke (onepart, twopart)
+     *
+     * @param categories   - categories of joke
+     * @param language     - joke language
+     * @param flags        - flags for joke (blacklist)
+     * @param jokeTypes    - type of joke (onepart, twopart)
      * @param searchString - specific search string for joke
-     * @param amount - how many jokes
+     * @param amount       - how many jokes
      */
     @CrossOrigin
     @PostMapping("/loadNewJokes")

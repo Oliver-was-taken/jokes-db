@@ -17,10 +17,9 @@ import org.springframework.test.web.reactive.server.WebTestClient;
 class JokesControllerTest implements WithAssertions {
 
     @Autowired
-    private WebTestClient webTestClient;
-
-    @Autowired
     JokesRepository jokesRepository;
+    @Autowired
+    private WebTestClient webTestClient;
 
     @Test
     void getOneJoke() {
