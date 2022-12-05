@@ -55,12 +55,12 @@ public class JokesController {
 
     /**
      * Load new jokes int database
-     * @param categories
-     * @param language
-     * @param flags
-     * @param jokeTypes
-     * @param searchString
-     * @param amount
+     * @param categories - categories of joke
+     * @param language - joke language
+     * @param flags - flags for joke (blacklist)
+     * @param jokeTypes - type of joke (onepart, twopart)
+     * @param searchString - specific search string for joke
+     * @param amount - how many jokes
      */
     @CrossOrigin
     @PostMapping("/loadNewJokes")

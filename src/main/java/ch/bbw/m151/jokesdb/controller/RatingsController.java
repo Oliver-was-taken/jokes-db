@@ -22,8 +22,8 @@ public class RatingsController {
     /**
      * Add a rating to a joke
      * @param jokeId - OneToOne foreign key to joke
-     * @param starRating
-     * @param description
+     * @param starRating - Rating of joke
+     * @param description - description of rating
      */
     @CrossOrigin
     @PostMapping("/rateJoke")
