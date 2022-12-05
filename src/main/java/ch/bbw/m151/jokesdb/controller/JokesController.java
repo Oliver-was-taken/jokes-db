@@ -31,12 +31,21 @@ public class JokesController {
     @Autowired
     private JokesService jokesService;
 
+    /**
+     * Get all jokes from database
+     * @param pageable
+     * @return randomJokes
+     */
     @GetMapping("/jokes")
     public List<JokesEntity> getJokes(Pageable pageable) {
         logger.info("JokesController.getJokes" + LocalDateTime.now());
         return jokesRepository.findAll(pageable).getContent();
     }
 
+    /**
+     * Get a random joke from database
+     * @return randomJoke
+     */
     @CrossOrigin
     @GetMapping("/getOneJoke")
     public Optional<JokesEntity> getJoke() {
@@ -44,6 +53,15 @@ public class JokesController {
         return jokesService.getRandomJoke();
     }
 
+    /**
+     * Load new jokes int database
+     * @param categories
+     * @param language
+     * @param flags
+     * @param jokeTypes
+     * @param searchString
+     * @param amount
+     */
     @CrossOrigin
     @PostMapping("/loadNewJokes")
     public void loadNewJokes(@RequestParam("categories") List<String> categories, @RequestParam("language") String language, @RequestParam("flags") List<String> flags, @RequestParam("jokeTypes") List<String> jokeTypes, @RequestParam("searchString") String searchString, @RequestParam("amount") int amount) {

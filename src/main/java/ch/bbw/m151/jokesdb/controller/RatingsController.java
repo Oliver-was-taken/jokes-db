@@ -19,6 +19,12 @@ public class RatingsController {
     @Autowired
     private final RatingService ratingService;
 
+    /**
+     * Add a rating to a joke
+     * @param jokeId - OneToOne foreign key to joke
+     * @param starRating
+     * @param description
+     */
     @CrossOrigin
     @PostMapping("/rateJoke")
     public void rateAJoke(@RequestParam("jokeId") int jokeId, @RequestParam("starRating") int starRating, @RequestParam("description") String description){
